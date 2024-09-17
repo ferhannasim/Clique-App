@@ -76,6 +76,10 @@ GEM
       tzinfo (~> 2.0)
     addressable (2.8.6)
       public_suffix (>= 2.0.2, < 6.0)
+    babel-source (5.8.35)
+    babel-transpiler (0.7.0)
+      babel-source (>= 4.0, < 6)
+      execjs (~> 2.0)
     base64 (0.2.0)
     bigdecimal (3.1.8)
     bindex (0.8.1)
@@ -94,6 +98,7 @@ GEM
       xpath (~> 3.2)
     coderay (1.1.3)
     concurrent-ruby (1.2.3)
+    connection_pool (2.4.1)
     crass (1.0.6)
     csv (3.3.0)
     date (3.3.4)
@@ -105,6 +110,7 @@ GEM
       dotenv (= 3.1.2)
       railties (>= 6.1)
     erubi (1.12.0)
+    execjs (2.9.1)
     globalid (1.2.1)
       activesupport (>= 6.1)
     hash_diff (1.1.1)
@@ -125,7 +131,9 @@ GEM
     jbuilder (2.12.0)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
-    jwt (2.8.1)
+    jsbundling-rails (1.3.1)
+      railties (>= 6.0.0)
+    jwt (2.8.2)
       base64
     loofah (2.22.0)
       crass (~> 1.0.2)
@@ -155,9 +163,11 @@ GEM
     nio4r (2.7.3)
     nokogiri (1.16.5-x86_64-linux)
       racc (~> 1.4)
-    oj (3.16.3)
+    oj (3.16.5)
       bigdecimal (>= 3.0)
-    openssl (3.2.0)
+      ostruct (>= 0.2)
+    openssl (3.1.0)
+    ostruct (0.6.0)
     pry (0.14.2)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -201,6 +211,12 @@ GEM
     rake (13.2.1)
     rdoc (6.7.0)
       psych (>= 4.0.0)
+    react-rails (3.2.1)
+      babel-transpiler (>= 0.7.0)
+      connection_pool
+      execjs
+      railties (>= 3.2)
+      tilt
     redirect_safely (1.0.0)
       activemodel
     redis (4.8.1)
@@ -236,7 +252,7 @@ GEM
       redirect_safely (~> 1.0)
       shopify_api (~> 13.4)
       sprockets-rails (>= 2.0.0)
-    sorbet-runtime (0.5.11391)
+    sorbet-runtime (0.5.11558)
     sprockets (4.2.1)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -250,6 +266,7 @@ GEM
     stringio (3.1.0)
     strscan (3.1.0)
     thor (1.3.1)
+    tilt (2.4.0)
     timeout (0.4.1)
     turbo-rails (2.0.5)
       actionpack (>= 6.0.0)
@@ -278,11 +295,15 @@ DEPENDENCIES
   capybara
   debug
   dotenv-rails
+  httparty
   importmap-rails
   jbuilder
+  jsbundling-rails
+  openssl (~> 3.1.0)
   pry
   puma (~> 5.0)
   rails (~> 7.0.8, >= 7.0.8.3)
+  react-rails
   redis (~> 4.0)
   selenium-webdriver
   shopify_app (~> 21.2)
@@ -294,7 +315,7 @@ DEPENDENCIES
   web-console
 
 RUBY VERSION
-   ruby 3.1.4p223
+   ruby 3.2.2p53
 
 BUNDLED WITH
    2.3.26

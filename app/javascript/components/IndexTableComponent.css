@@ -1,0 +1,71 @@
+/* IndexTableComponent.css */
+
+/* Styling for the Card component */
+/*.Card {*/
+/*  padding: 1rem;*/
+/*  margin: 1rem;*/
+/*  border-radius: 8px;*/
+/*  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);*/
+/*}*/
+
+/*!* Styling for the IndexTable component *!*/
+/*.IndexTable {*/
+/*  margin-top: 1rem;*/
+/*  border-collapse: collapse;*/
+/*  width: 100%;*/
+/*}*/
+
+/*!* Styling for table headers *!*/
+/*.IndexTable thead {*/
+/*  background-color: #f9f9f9;*/
+/*  border-bottom: 1px solid #e0e0e0;*/
+/*}*/
+
+/*.IndexTable th {*/
+/*  padding: 0.75rem;*/
+/*  text-align: left;*/
+/*  font-weight: 600;*/
+/*  color: #333;*/
+/*}*/
+
+/*!* Styling for table cells *!*/
+/*.IndexTable td {*/
+/*  padding: 0.75rem;*/
+/*  border-bottom: 1px solid #e0e0e0;*/
+/*  color: #666;*/
+/*}*/
+
+/*!* Hover effect for table rows *!*/
+/*.IndexTable tr:hover {*/
+/*  background-color: #f1f1f1;*/
+/*}*/
+
+/*!* Styling for selected rows *!*/
+/*.IndexTable .selected {*/
+/*  background-color: #e0f7fa; !* Light cyan for selected rows *!*/
+/*}*/
+
+/*!* Optional: Styling for badges *!*/
+/*.Badge {*/
+/*  margin-right: 0.5rem;*/
+/*}*/
+
+/* Make the IndexTable headings bold and increase font size */
+.polaris-IndexTable__Table thead th .Polaris-Text--variantHeadingSm {
+  font-weight: bold !important;
+  font-size: 18px !important;
+}
+
+/* You may need to adjust specificity based on Polaris classes */
+.polaris-IndexTable__Table thead th {
+  font-weight: bold !important;
+  font-size: 18px !important;
+  text-align: left; /* Optional: to align text to left */
+}
+.body-tag {
+  padding: 50px;
+}
+
+.polaris-color-picker {
+  background-color: #1ad027 !important;
+}

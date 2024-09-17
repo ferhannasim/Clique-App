@@ -5,6 +5,7 @@
     <% application_name = ShopifyApp.configuration.application_name %>
     <title><%= application_name %></title>
     <%= stylesheet_link_tag 'application' %>
+    <%= stylesheet_link_tag 'main' %>
     <% if ShopifyApp.use_webpacker? %>
       <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <% elsif ShopifyApp.use_importmap? %>
@@ -15,7 +16,7 @@
     <%= csrf_meta_tags %>
   </head>
 
-  <body>
+  <body class="body-tag">
     <div class="app-wrapper">
       <div class="app-content">
         <main role="main">

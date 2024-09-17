@@ -10,7 +10,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_05_27_134943) do
+ActiveRecord::Schema[7.0].define(version: 2024_09_09_140208) do
+  create_table "products", force: :cascade do |t|
+    t.bigint "shopify_product_id"
+    t.string "status"
+    t.string "inventory"
+    t.string "type"
+    t.string "vendor"
+    t.string "dropship_supplier"
+    t.string "warehouse_location"
+    t.string "subcategory"
+    t.decimal "quantity"
+    t.decimal "unit_cost_eur"
+    t.decimal "cost_of_dropship_carrier_eur"
+    t.decimal "unit_cost_usd"
+    t.decimal "unit_cost_egp"
+    t.decimal "cost_of_kg"
+    t.decimal "unit_weight_gr"
+    t.decimal "unit_cost_including_weight_usd"
+    t.decimal "unit_cost_including_weight_egp"
+    t.decimal "gross_margin"
+    t.decimal "final_price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "shops", force: :cascade do |t|
     t.string "shopify_domain", null: false
     t.string "shopify_token", null: false
