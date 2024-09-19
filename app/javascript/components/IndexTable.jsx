@@ -19,8 +19,8 @@ import { AppLink, NavigationMenu } from '@shopify/app-bridge/actions';
 import './IndexTableComponent.css'
 
 export default function IndexTableComponent() {
+    const ordersUrl = document.getElementById('app-root').getAttribute('data-orders-url');
         useEffect(() => {
-            // Initialize Shopify App Bridge
             const config = {
                 apiKey: "13cb39066c49258dd5f45ab029840428",
                 host: new URLSearchParams(window.location.search).get('host'),
@@ -37,7 +37,7 @@ export default function IndexTableComponent() {
 
             const ordersLink = AppLink.create(app, {
                 label: 'Orders',
-                destination: '/orders',
+                destination: ordersUrl,
             });
 
             const customersLink = AppLink.create(app, {
